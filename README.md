@@ -42,7 +42,7 @@ Final SQL Output
 ---
 
 # Project Structure
-
+'''
 AI_SQL_assistant/
 │
 ├── main.py
@@ -60,7 +60,7 @@ AI_SQL_assistant/
 │
 └── screenshots/
     └── sample_output.png
-
+'''
 ---
 
 # How It Works
