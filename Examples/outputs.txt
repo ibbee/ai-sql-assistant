@@ -1,0 +1,44 @@
+==================================================
+User QUERY
+==================================================
+total order amount for each customer
+
+==================================================
+SQL QUERY
+==================================================
+SELECT customers.id AS customer_id, customers.name AS customer_name, city, SUM(amount) AS total_order_amount FROM orders INNER JOIN customers ON orders.customer_id = customers.id GROUP BY customers.id, city;
+
+EXPLANATION
+==================================================
+Calculates the total order amount for each customer by joining the customers and orders tables and aggregating sum of amounts grouped by customer ID and city.
+
+==================================================
+User QUERY
+==================================================
+number of unique customer orders per month
+
+ GROUP BY Warning:
+Columns missing from GROUP BY: ["DATE_TRUNC('month'", 'order_date) AS month']
+
+==================================================
+SQL QUERY
+==================================================
+SELECT DATE_TRUNC('month', order_date) AS month, COUNT(DISTINCT customer_id) AS unique_customer_orders FROM orders GROUP BY month ORDER BY month;
+
+EXPLANATION
+==================================================
+Calculates the number of unique customer orders aggregated by month.
+
+==================================================
+User QUERY
+==================================================
+total order amount per city
+
+==================================================
+SQL QUERY
+==================================================
+SELECT customers.city, SUM(orders.amount) AS total_order_amount FROM orders JOIN customers ON orders.customer_id = customers.id GROUP BY customers.city ORDER BY total_order_amount;
+
+EXPLANATION
+==================================================
+Calculates the total order amount for each city by joining the orders and customers tables, then grouping by city.

@@ -1,0 +1,5 @@
+total order amount for each customer
+
+number of unique customer orders per month
+
+total order amount per city
