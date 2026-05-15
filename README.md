@@ -26,7 +26,7 @@ instead of relying purely on raw LLM generation.
 ---
 
 # Project Architecture
-
+```
 User Query
     ↓
 Prompt Builder
@@ -38,11 +38,11 @@ JSON Parsing
 Validation Layer
     ↓
 Final SQL Output
-
+```
 ---
 
 # Project Structure
-'''
+```
 AI_SQL_assistant/
 │
 ├── main.py
@@ -60,7 +60,7 @@ AI_SQL_assistant/
 │
 └── screenshots/
     └── sample_output.png
-'''
+```
 ---
 
 # How It Works
